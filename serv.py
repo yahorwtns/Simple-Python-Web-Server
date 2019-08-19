@@ -5,9 +5,9 @@ class Serv(BaseHTTPRequestHandler):
 
     def do_GET(self):
         if self.path == '/':
-            self.path = '/python-sample-dir/Simple-Python-Web-Server/index.html'
+            self.path = '/index.html'
         try:
-            file_to_open = open(self.path[1:]).read()
+            file_to_open = open(self.path).read()
             self.send_response(200)
         //except:
         //    file_to_open = "File not found"
